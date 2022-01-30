@@ -10,14 +10,17 @@
 */
 
 
-function foo() {
+function foo() {    // creates page content (index.html initially including only a body element)
+    
+// creates ul with 3 li elements with string values of a, b, and c, respectively
     let myList = document.createElement('ul')
     myList.setAttribute('id', 'myList')
 
     let itemZero = document.createElement('li')
     itemZero.setAttribute('id', 'item0')
     itemZero.textContent = 'Item #0'
-    document.getElementById("myList").append(itemZero)  //set this (ul) element as current and insert <li>Item #0</li> into <ul>{insert item here}</ul>
+    itemZero.append(myList)
+    //document.getElementById("myList").append(itemZero)  //set this (ul) element as current and insert <li>Item #0</li> into <ul>{insert item here}</ul>
     //document.querySelector('#myList') //don't know if this works   //sets this (ul) element as current
     //document.append(itemZero)           //
 
@@ -29,12 +32,19 @@ function foo() {
     document.querySelector('li')
     for (i=0; i < listItems.length; i++) {
         let x = document.createElement('li')
+    
+        /* WHY DOESN'T THIS WORK?  20220130/pt@philipt.com 
         x.textContent = listItems[i]   // assign text content to this element
-        myList.append(x)
-        // x.append(listItems[i])   //doesn't seem to work
+        myList.append(x)   // assign text content to this element & render
+        */
+
+        /* or, alternatively:*/
+        x.textContent = listItems[i]   // assign text content to this element
+        myList.append(x)               //render element
+        /* */
+    // end of "creates ul with 3 li elements..."
     }
     
     }
 
-// ?
 
