@@ -1,4 +1,10 @@
 /*
+    for NCSU Full Stack Software Development course (January 2022)
+    Module 7: Lesson Companion (1.7.2)-2
+    Create three list item (li) elements, give each one unique content, and add all three to the list.
+*/
+
+/*
     javascript executes BEFORE HTML doc loads,
     so the elements to which the js refer won't exist until AFTER the HTML is loaded,
     so we must ensure that the HTML is loaded BEFORE we call the code
@@ -43,8 +49,8 @@ function foo() {    // creates page content (index.html initially including only
         myList.append(x)               //render element
         /* */
     // end of "creates ul with 3 li elements..."
-    }
+    }   // for i=0;...
     
-    }
+    }   //function foo
 
 
